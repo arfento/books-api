@@ -54,6 +54,8 @@ app.delete('/api/books/:id' , (req, res) =>{
         res.status(404).send('Books not Found');
     }
     const index = books.indexOf(book);
+
+    //yang terdelete hanya index ke 1
     books.splice(index, 1);
     res.send(book);
 
